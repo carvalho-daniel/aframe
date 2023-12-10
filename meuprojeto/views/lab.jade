@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    a-scene(cursor='rayOrigin: mouse' raycaster="object: .raycastable"  inspector-plugin-recast)
+        a-camera(position="2.440 1.5 4.584" )
+        a-assets-item(src="models/lab/scene.gltf" id="lab")
+
+        a-entity(gltf-model="#lab" scale="20 20 20" rotation="0 180 0")
+        a-link(href="/" title="Sala" position="2.053 0.980 9.865" scale='1 1 0' )
+        
+        a-sky(color="lightblue")

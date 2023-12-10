@@ -1,0 +1,25 @@
+extends layout
+
+block content 
+  a-scene(cursor='rayOrigin: mouse' raycaster="object: .raycastable"  inspector-plugin-recast)
+    
+    a-camera(position="0 1.7 0")
+    a-assests-item(src="/images/tabela.svg" id="tabela")
+
+    a-link(href="lab" title="Laboratório" image="" position="-0.195 0.985 2.3" scale='1 1 0' )
+    //- tabela= https://upload.wikimedia.org/wikipedia/commons/b/bf/Periodic_table_large-pt_BR.svg
+    a-entity(gltf-model="models/quadro/scene.gltf" position="1.421 1.864 -4.134" rotation="0 -90 0" scale="0.018 0.016 0.020" visible="true" id="quadro")
+    a-sky(color="lightblue")
+   
+    a-image(src="#tabela" position="-10.968 1.928 -4.772" rotation="0 90 0" scale="2.904 1.369 60")
+    a-plane(color="white" position="-11 1.923 -4.763" rotation="0 90 0" scale="2.901 1.320 60")
+    
+    
+    
+    a-box(color="yellow" scale="0.120 0.120 0.120" position="-11.008 2.462 -3.573" hidrogenio id="hidrogenio" visible="false")
+    a-box(color="yellow" scale="0.120 0.120 0.120" position="-11.008 2.340 -3.573" litio id="hidrogenio" visible="false")
+
+    
+    a-entity(gltf-model="models/escola/scene.gltf" )
+    //- a-entity(gltf-model="models/professor/scene.gltf" rotation="-90 0 0")
+    
